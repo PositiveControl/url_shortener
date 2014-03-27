@@ -9,7 +9,8 @@ feature 'finding the homepage' do
   scenario 'homepage has a form' do
     visit ('/')
 
-    expect(page).to have_content("Enter URL to be shortened")
+    expect(find_field('url_entry').value).to eq 'Enter the URL you would like to "shorten"'
     fill_in "url_entry", :with => "http://www.whitehouse.com"
+    click_on "Shorten"
   end
 end
