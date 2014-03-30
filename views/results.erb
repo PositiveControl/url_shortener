@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Ur-ly URL Shortener</title></head>
+<body>
+
+<table>
+  <% urls.each do |url| %>
+  <tr>
+  <td>Original URL:</td>
+    <td><%= url[:entered_url] %></td>
+    </tr>
+  <tr>
+  <td>"Shortened" URL: </td>
+    <td>http://ur-ly.herokuapp.com/<%= url[:id] %> </td>
+  </tr>
+  <% end %>
+</table>
+</body>
+<footer>Anchor: at the bottom of the ocean... Mark</footer>
+</html>

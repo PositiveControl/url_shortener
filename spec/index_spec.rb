@@ -19,11 +19,8 @@ feature 'finding the homepage' do
     fill_in "url_entry", :with => "http://www.whitehouse.com"
     click_on "Shorten"
     expect(page).to have_content "Original URL"
-    #expect(page).to have_content '"Shortened" URL'
-
-
-    #expect(page).to have_content "http://www.whitehouse.com"
-    #expect(page).to have_content "http://ur-ly.herokuapp.com/1"
-
+    expect(page).to have_content '"Shortened" URL'
+    expect(page).to have_content "http://www.whitehouse.com"
+    expect(page).to have_content "http://ur-ly.herokuapp.com/1"
   end
 end
