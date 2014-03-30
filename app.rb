@@ -1,5 +1,4 @@
 require 'sinatra/base'
-require 'rerun'
 
 class App < Sinatra::Application
 
