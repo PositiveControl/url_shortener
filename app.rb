@@ -20,4 +20,11 @@ class App < Sinatra::Application
     urlid = STORED_URLS.length - 1
     erb :results, locals: {urls: STORED_URLS, url_id: urlid }
   end
+
+  get '/:id' do
+    url_acces = params[:id].to_i - 1
+    orig_url = STORED_URLS[url_acces][:entered_url]
+    redirect 'http://' + orig_url
+  end
+
 end
