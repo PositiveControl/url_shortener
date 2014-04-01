@@ -1,21 +1,17 @@
-<!DOCTYPE html>
 <html>
 <head><title>Ur-ly URL Shortener</title></head>
-<body>
-
+<link href="style.css" rel="stylesheet" type="text/css">
+<body class="centered_results">
 <table>
-  <% urls.each do |url| %>
   <tr>
-  <td>Original URL:</td>
-    <td><%= url[:entered_url] %></td>
+  <td class="td"><b>Original URL:</b></td>
+    <td><%= urls[url_id][:entered_url] %></td>
     </tr>
   <tr>
-  <td>"Shortened" URL: </td>
-    <td>http://ur-ly.herokuapp.com/<%= url[:id] %> </td>
+  <td class="td"><b>"Shortened" URL:</b></td>
+    <td>http://ur-ly.herokuapp.com/<%= urls[url_id][:id] %> </td>
   </tr>
-  <% end %>
 </table>
 
 </body>
-<footer>Anchor: at the bottom of the ocean... Mark</footer>
 </html>

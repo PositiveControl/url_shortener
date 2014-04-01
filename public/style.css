@@ -1,0 +1,40 @@
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: 0em;
+    margin-left: -9em;
+    outline: none;
+}
+
+.centered_results {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    margin-top: 0em;
+    margin-left: -9em;
+    outline: none;
+}
+
+.text_field {
+    border: 2px solid black;
+    height: 2em;
+}
+
+.centered_button {
+    position: fixed;
+    margin-top: 1em;
+    margin-left: 12em;
+    background-color: #0077ff;
+    color:#fff;
+    text-decoration:none;
+    border: 2px solid black;
+    padding: 8px;
+    box-shadow:  3px 3px 0px 0px black;
+}
+
+.td {
+    table-layout: fixed;
+    width: 50%;
+    padding: 3%;
+}
