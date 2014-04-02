@@ -3,6 +3,7 @@
 <head><title>Ur-ly URL Shortener</title></head>
 <link href="style.css" rel="stylesheet" type="text/css">
 <body>
+<p class="centered_error"><%= error_message.last %></p>
     <form class="centered" action="/urls" method="post">
       <input  class="text_field" type="text" name="url_entry" placeholder='Enter the URL you would like to "shorten"' size="60">
       <br/>

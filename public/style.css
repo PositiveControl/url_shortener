@@ -7,6 +7,15 @@
     outline: none;
 }
 
+.centered_error {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -2.5em;
+    margin-left: -7em;
+    outline: none;
+    color: red;
+}
 .centered_results {
     position: fixed;
     top: 30%;
