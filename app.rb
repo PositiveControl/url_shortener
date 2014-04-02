@@ -12,7 +12,10 @@ class App < Sinatra::Application
 
   post '/urls' do
 
-    if (params[:url_entry] =~ /^#{URI::regexp}$/) == nil
+    if params[:url_entry].empty?
+      ERRORMESSAGE << "URL cannot be blank"
+      redirect ('/')
+    elsif (params[:url_entry] =~ /^#{URI::regexp}$/) == nil
       ERRORMESSAGE << "The text you entered is not a valid URL"
       redirect ('/')
     else
