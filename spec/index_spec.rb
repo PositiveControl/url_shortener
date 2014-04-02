@@ -19,8 +19,11 @@ feature 'Shortens a URL' do
     expect(page).to have_content '"Shortened" URL'
     expect(page).to have_content "http://www.google.com"
     expect(page).to have_content "http://ur-ly.herokuapp.com/"
+    click_on '"Shorten" another URL'
+    current_url.should == "http://www.example.com/"
     visit '/1'
     current_url.should == "http://www.google.com/"
+
   end
 
   scenario 'user inputs non-URL' do
@@ -41,4 +44,5 @@ feature 'Shortens a URL' do
     click_on "Shorten"
     expect(page).to have_content "URL cannot be blank"
   end
+
 end

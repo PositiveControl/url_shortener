@@ -4,12 +4,18 @@
 <body class="centered_results">
 <table>
   <tr>
-  <td class="td"><b>Original URL:</b></td>
+    <td class="td"><b>Original URL:</b></td>
     <td><%= urls[url_id][:entered_url] %></td>
-    </tr>
+  </tr>
   <tr>
-  <td class="td"><b>"Shortened" URL:</b></td>
-    <td><a href="/<%= urls[url_id][:id] %>">http://ur-ly.herokuapp.com/<%= urls[url_id][:id] %></a> </td>
+    <td class="td"><b>"Shortened" URL:</b></td>
+    <td><a href="/<%= urls[url_id][:id] %>">http://ur-ly.herokuapp.com/<%= urls[url_id][:id] %></a></td>
+  </tr>
+  <br/>
+  <tr>
+    <td colspan="2" style="text-align: center;">
+      <a href="/">"Shorten" another URL</a>
+    </td>
   </tr>
 </table>
 
